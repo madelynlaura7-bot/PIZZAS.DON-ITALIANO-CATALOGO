@@ -1,0 +1,98 @@
+[
+  {
+    "id": "basica",
+    "name": "Básica",
+    "category": "Clásicas",
+    "description": "Morrón, queso, jamón y aceitunas.",
+    "tag": "Tradicional",
+    "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "carnivora",
+    "name": "Carnívora",
+    "category": "Especiales",
+    "description": "Jamón, pepperoni, tocino, carne molida, chorizo, salami y queso.",
+    "tag": "Favorita",
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "tradicional",
+    "name": "Tradicional",
+    "category": "Clásicas",
+    "description": "La combinación de siempre: jamón y queso.",
+    "tag": "Clásica",
+    "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "hawaiana",
+    "name": "Hawaiana",
+    "category": "Especiales",
+    "description": "Piña, durazno, tomate cherry y queso.",
+    "tag": "Dulce y salada",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "pepperoni",
+    "name": "Pepperoni",
+    "category": "Clásicas",
+    "description": "Pepperoni y queso fundido sobre nuestra masa.",
+    "tag": "Popular",
+    "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "clasica",
+    "name": "Clásica de choclo",
+    "category": "Clásicas",
+    "description": "Jamón, queso y granos tiernos de choclo.",
+    "tag": "De la casa",
+    "image": "https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "espanola",
+    "name": "Española",
+    "category": "Especiales",
+    "description": "Queso y chorizo español de sabor intenso.",
+    "tag": "Especial",
+    "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "tropical",
+    "name": "Tropical",
+    "category": "Especiales",
+    "description": "Piña, durazno, jamón, pimiento y queso mozzarella.",
+    "tag": "Frutal",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "margarita",
+    "name": "Margarita",
+    "category": "Clásicas",
+    "description": "Tomate, mozzarella, albahaca y un toque de aceite de oliva.",
+    "tag": "Italiana",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "cuatroquesos",
+    "name": "Cuatro quesos",
+    "category": "Especiales",
+    "description": "Mozzarella, parmesano, cheddar y queso azul.",
+    "tag": "Quesera",
+    "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "vegetariana",
+    "name": "Vegetariana",
+    "category": "Vegetarianas",
+    "description": "Champiñones, morrón, cebolla, tomate, aceitunas y queso.",
+    "tag": "Sin carne",
+    "image": "https://images.unsplash.com/photo-1511689660979-10d2b1aada49?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "id": "bbq",
+    "name": "BBQ",
+    "category": "Especiales",
+    "description": "Pollo, cebolla, mozzarella y salsa barbacoa.",
+    "tag": "Ahumada",
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85"
+  }
+]

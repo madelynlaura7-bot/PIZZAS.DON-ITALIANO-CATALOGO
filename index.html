@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#9d251d">
+  <meta name="description" content="Pizzería Don Italiano: pizzas artesanales, sabores clásicos y especiales.">
+  <title>Don Italiano | Pizzería artesanal</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="topline">
+      <span class="status"><i id="statusDot"></i><span id="networkStatus">Comprobando conexión…</span></span>
+      <span class="topline-note">Hechas para compartir · Sabor italiano</span>
+    </div>
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Don Italiano, inicio">
+        <img class="brand-logo" src="assets/logo-don-italiano.jpg" alt="Logotipo Don Italiano"><span>DON <b>ITALIANO</b><small>PIZZERÍA ARTESANAL</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a><a href="#nosotros">Conócenos</a><a href="#menu">Menú completo</a>
+        <a href="#sabores">Sabores</a><a href="#reservas">Reservar</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Cambiar modo claro u oscuro" title="Cambiar tema">☾</button>
+        <a class="btn btn-small btn-red" href="#reservas">Pedir ahora</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">TRADICIÓN · HORNO · SABOR</p>
+        <h1>Una buena pizza<br><em>lo cambia todo.</em></h1>
+        <p class="hero-copy">Masa suave, ingredientes seleccionados y sabores para cada antojo. Encuentra tu favorita en Don Italiano.</p>
+        <div class="hero-actions"><a class="btn btn-gold" href="#menu">Explorar el menú <span>→</span></a><a class="text-link" href="#nosotros">Nuestra historia</a></div>
+        <div class="hero-stats"><span><b>7</b> sabores clásicos</span><span><b>6</b> tamaños</span><span><b>100%</b> sabor</span></div>
+      </div>
+      <div class="hero-stamp">PIZZA<br><b>FELICITÀ</b></div>
+    </section>
+
+    <section class="intro section container" id="nosotros">
+      <div class="intro-photo photo-frame"><img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=1000&q=85" alt="Pizza artesanal recién horneada" onerror="this.src='https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=1000&q=85'"></div>
+      <div class="intro-copy">
+        <p class="eyebrow">BENVENUTI A DON ITALIANO</p>
+        <h2>El placer de compartir<br><em>una pizza de verdad.</em></h2>
+        <p>Don Italiano nace para reunir a las personas alrededor de una mesa. Nuestra propuesta combina recetas conocidas, ingredientes llenos de sabor y opciones para disfrutar en cualquier ocasión.</p>
+        <p>Desde una pizza individual hasta una familiar para compartir, cada tamaño está pensado para que elijas cómo disfrutarla.</p>
+        <a class="under-link" href="#sabores">Descubre nuestros sabores <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="sizes-band">
+      <div class="container">
+        <div class="section-heading light-heading"><p class="eyebrow">EL TAMAÑO IDEAL PARA TI</p><h2>Una pizza para cada momento</h2><p>Precios referenciales expresados en bolivianos (Bs).</p></div>
+        <div class="size-grid" id="sizeGrid"></div>
+      </div>
+    </section>
+
+    <section class="section container" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">NUESTRO CATÁLOGO</p><h2>Elige tu próxima <em>favorita</em></h2>
+        <p>Explora las variedades, filtra por categoría y agrega tus pizzas al pedido.</p>
+      </div>
+      <div class="catalog-tools">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar una pizza…" aria-label="Buscar pizzas"></label>
+        <div class="filter-row" id="filterRow">
+          <button class="filter-chip active" data-filter="Todas">Todas</button>
+          <button class="filter-chip" data-filter="Clásicas">Clásicas</button>
+          <button class="filter-chip" data-filter="Especiales">Especiales</button>
+          <button class="filter-chip" data-filter="Vegetarianas">Vegetarianas</button>
+        </div>
+      </div>
+      <div class="carousel-controls" aria-label="Controles del catálogo"><button type="button" id="pizzaPrev" aria-label="Ver pizzas anteriores">←</button><span>Desliza para descubrir más pizzas</span><button type="button" id="pizzaNext" aria-label="Ver pizzas siguientes">→</button></div><div class="pizza-grid pizza-carousel" id="pizzaGrid" aria-live="polite"></div>
+      <div class="catalog-foot"><span id="resultCount">Mostrando pizzas</span><button class="btn btn-outline" id="hydrateBtn">↻ Hidratar catálogo</button></div>
+    </section>
+
+    <section class="flavor-section" id="sabores">
+      <div class="container flavor-layout">
+        <div><p class="eyebrow">MÁS QUE UNA RECETA</p><h2>Sabores que hacen<br><em>volver por otra.</em></h2><p>Tenemos combinaciones tradicionales y opciones especiales para que cada visita sea diferente.</p><a class="btn btn-gold" href="#menu">Ver todas las pizzas</a></div>
+        <div class="flavor-cards">
+          <article class="flavor-card"><span>01</span><h3>Tradición italiana</h3><p>Recetas sencillas donde el queso y los ingredientes son protagonistas.</p></article>
+          <article class="flavor-card"><span>02</span><h3>Para los amantes de la carne</h3><p>Combinaciones intensas con pepperoni, tocino, chorizo y más.</p></article>
+          <article class="flavor-card"><span>03</span><h3>Toque tropical</h3><p>Mezclas dulces y saladas con frutas y mucho queso.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container order-section" id="reservas">
+      <div class="section-heading"><p class="eyebrow">TU PIZZA ESTÁ A UN MENSAJE</p><h2>Reserva o realiza <em>tu pedido</em></h2><p>Completa tus datos. El formulario revisará que la información sea válida antes de preparar el mensaje.</p></div>
+      <div class="order-layout">
+        <form class="order-form" id="orderForm" novalidate>
+          <div class="form-grid">
+            <label>Nombre completo<input id="customerName" name="name" type="text" minlength="4" maxlength="60" required placeholder="Ej. María López"><small class="error" id="nameError"></small></label>
+            <label>WhatsApp<input id="customerPhone" name="phone" type="tel" inputmode="numeric" required placeholder="7XXXXXXX" pattern="7[0-9]{7}"><small class="hint">8 dígitos, comenzando con 7.</small><small class="error" id="phoneError"></small></label>
+            <label>Correo electrónico<input id="customerEmail" name="email" type="email" required placeholder="nombre@correo.com"><small class="error" id="emailError"></small></label>
+            <label>Departamento
+              <select id="department" required><option value="">Selecciona tu departamento</option><option>La Paz</option><option>Santa Cruz</option><option>Cochabamba</option><option>Oruro</option><option>Potosí</option><option>Chuquisaca</option><option>Tarija</option><option>Beni</option><option>Pando</option></select><small class="error" id="departmentError"></small>
+            </label>
+            <label>Pizza<select id="orderPizza" required><option value="">Selecciona una variedad</option></select><small class="error" id="pizzaError"></small></label>
+            <label>Tamaño<select id="orderSize" required><option value="">Selecciona un tamaño</option></select><small class="error" id="sizeError"></small></label>
+            <label>Cantidad<input id="quantity" type="number" min="1" max="20" value="1" required><small class="error" id="quantityError"></small></label>
+            <label>Fecha de pedido<input id="orderDate" type="date" required><small class="error" id="dateError"></small></label>
+          </div>
+          <label class="full-label">Indicaciones adicionales<textarea id="notes" rows="3" maxlength="250" placeholder="Ej. Sin aceitunas, recoger a las 19:00…"></textarea></label>
+          <div class="form-total"><span>Total estimado</span><strong id="orderTotal">Bs 0</strong></div>
+          <p class="form-disclaimer">Este catálogo es una demostración académica. Confirma disponibilidad y precios antes de realizar una compra real.</p>
+          <button class="btn btn-red btn-submit" type="submit">Continuar por WhatsApp <span>↗</span></button>
+          <p class="form-feedback" id="formFeedback" role="status"></p>
+        </form>
+        <aside class="order-aside">
+          <div class="aside-image"><img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=900&q=85" alt="Pizza con queso y vegetales" loading="lazy"></div>
+          <div class="aside-content"><p class="eyebrow">HECHO PARA COMPARTIR</p><h3>Tu momento<br>favorito comienza aquí.</h3><p>Selecciona el sabor, el tamaño y la cantidad. El resumen se preparará para enviarlo por WhatsApp.</p><div class="whatsapp-number">Pedidos por WhatsApp<br><b>+591 77761768</b><br><a href="https://wa.me/59177761768" target="_blank" rel="noopener">Abrir WhatsApp ↗</a></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container faq-layout"><div><p class="eyebrow">¿TIENES DUDAS?</p><h2>Preguntas <em>frecuentes</em></h2><p>Información rápida para elegir tu pizza.</p></div>
+        <div class="accordion" id="faqAccordion">
+          <article class="faq-item"><button class="faq-question" aria-expanded="false">¿Qué tamaños de pizza ofrecen?<span>＋</span></button><div class="faq-answer"><p>Individual, pequeña, mediana, especial, grande y familiar.</p></div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false">¿Puedo personalizar mi pedido?<span>＋</span></button><div class="faq-answer"><p>Puedes escribir indicaciones en el campo de observaciones. La disponibilidad debe confirmarse al realizar el pedido.</p></div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false">¿Cómo se confirma una reserva?<span>＋</span></button><div class="faq-answer"><p>Completa el formulario y continúa por WhatsApp. La reserva queda pendiente de confirmación del establecimiento.</p></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main"><a class="brand footer-brand" href="#inicio"><img class="brand-logo" src="assets/logo-don-italiano.jpg" alt="Logotipo Don Italiano"><span>DON <b>ITALIANO</b><small>PIZZERÍA ARTESANAL</small></span></a><p>Una buena pizza reúne buenos momentos.</p><a class="btn btn-gold" href="#reservas">Haz tu pedido</a></div>
+    <div class="container footer-social"><a href="mailto:fusiondelsabor13@gmail.com">fusiondelsabor13@gmail.com</a><a href="https://www.facebook.com/share/19rq5YiLdB/" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@don.italiano1?_r=1&_t=ZS-9BZrQTwBrAj" target="_blank" rel="noopener">TikTok</a><a href="https://wa.me/59177761768" target="_blank" rel="noopener">WhatsApp +591 77761768</a></div><div class="container footer-bottom"><span>© <span id="year"></span> Don Italiano · Pizzería artesanal</span><span>Catálogo y pedidos</span></div>
+  </footer>
+
+  <div class="modal-backdrop" id="calcModal" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="closeModal" aria-label="Cerrar">×</button><p class="eyebrow">HERRAMIENTA</p><h2 id="modalTitle">Calculadora de pedido</h2><p>Calcula el importe de una pizza según su tamaño y cantidad.</p><label>Tamaño<select id="calcSize"></select></label><label>Cantidad<input id="calcQty" type="number" min="1" max="20" value="1"></label><div class="calc-result">Total: <strong id="calcResult">Bs 28</strong></div><button class="btn btn-red" id="calcDone">Listo</button></section>
+  </div>
+  <button class="floating-calc" id="openCalc" aria-label="Abrir calculadora" title="Calculadora">Bs</button>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
